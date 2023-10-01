@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom part 1</title>
+</head>
+<body>
+
+    <div>
+        <h1>counter app</h1>
+        <div>
+            <button id="decrementbutton"> decrement by 1</button>
+            <span id="displayvalue">0</span>
+
+            <button id="incrementbutton">increment by 1</button>
+        </div>
+
+        <button id="resetbtn">reset value</button>
+    </div>
+
+    <script>
+
+        const decrementbtn =document.getElementById("decrementbutton");
+        const incrementbtn =document.getElementById("incrementbutton");
+        const resetbtn =document.getElementById("resetbtn");
+        const displayvalue =document.getElementById("displayvalue");
+
+        decrementbtn.addEventListener("click" , ()=>{
+            const value = Number(displayvalue.innerText);
+            if(value > -10){
+                displayvalue.innerText =value-1;
+
+            }
+            else{
+                alert("negetive velue is not allowed");
+            }
+        });
+
+        incrementbtn.addEventListener("click" , () =>{
+            const value = Number(displayvalue.innerText);
+            if(value >= 100){
+                alert("100+ value are not allowed")
+
+            } else{
+                displayvalue.innerText=value+1
+            }
+           
+        });
+
+        resetbtn.addEventListener("click",() => {
+            displayvalue.innerText=0;
+        });
+    </script>
+    
+</body>
+</html>

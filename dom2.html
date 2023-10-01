@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dom.css">
+</head>
+<body>
+
+    <!-- onclick event -->
+
+    <div id="box">
+        <p class="click on me"> click me👍</p>
+    </div>
+
+    <script>
+
+        const boxelement=document.getElementById("box");
+         boxelement.addEventListener("click",() => {
+            alert("you just clicked me😁")
+         })
+
+    </script>
+
+    <!-- dubble click -->
+    <div id="box1">
+        <p class="click on me"> click me👍</p>
+    </div>
+
+    <script>
+
+        const boxelement1=document.getElementById("box1");
+         boxelement1.addEventListener("dblclick",() => {
+            alert("you just clicked me😁")
+         })
+
+    </script>
+
+
+
+<!-- mouseover -->
+<div id="box2">
+    <p class="click on me"> restricted area</p>
+</div>
+
+<script>
+    const boxelement2 = document.getElementsByClassName("click on me");
+
+   boxelement2. addEventListener("mouseover" ()=>{
+    alert("your entered in over area");
+   });
+</script>
+
+<!-- mouseout -->
+<div id="box3">
+    <p class="click on me"> restricted area</p>
+</div>
+
+<script>
+    const boxelement3 = document.getElementsByClassName("click on me");
+
+   boxelement3. addEventListener("mouseout" () => {
+    alert("your entered in over area is on");
+   });
+</script>
+<!-- onkeypress -->
+<div id="input">
+    <h1 id="display"></h1>
+    <input type="text" placeholder="type something......">
+</div>
+
+<script>
+    let input=  document. getElementById("input")
+    let display = document.getElementById('display')
+
+    input.addEventListener("keypress",(e) =>{
+        display.innerText= "you have pressed" + e.key
+    } )
+</script>
+
+
+    
+</body>
+</html>
